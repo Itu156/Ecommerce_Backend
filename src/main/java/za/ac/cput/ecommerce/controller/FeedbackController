@@ -1,0 +1,21 @@
+package com.fashiongroove.controller;
+
+import com.fashiongroove.model.Feedback;
+import com.fashiongroove.repository.FeedbackRepository;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/feedback")
+@CrossOrigin(origins = "*")
+public class FeedbackController {
+    private final FeedbackRepository repository;
+
+    public FeedbackController(FeedbackRepository repository) {
+        this.repository = repository;
+    }
+
+    @PostMapping
+    public Feedback submitFeedback(@RequestBody Feedback feedback) {
+        return repository.save(feedback);
+    }
+}
