@@ -1,0 +1,24 @@
+package com.fashiongroove.service;
+
+import com.fashiongroove.model.Newsletter;
+import com.fashiongroove.repository.NewsletterRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class NewsletterService {
+    private final NewsletterRepository repository;
+
+    public NewsletterService(NewsletterRepository repository) {
+        this.repository = repository;
+    }
+
+    public Newsletter save(Newsletter newsletter) {
+        return repository.save(newsletter);
+    }
+
+    public List<Newsletter> getAll() {
+        return repository.findAll();
+    }
+}
