@@ -1,0 +1,28 @@
+package com.fashiongroove.controller;
+
+import com.fashiongroove.model.ContactMessage;
+import com.fashiongroove.service.ContactService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/contact")
+@CrossOrigin(origins = "*")
+public class ContactController {
+    private final ContactService service;
+
+    public ContactController(ContactService service) {
+        this.service = service;
+    }
+
+    @PostMapping
+    public ContactMessage saveMessage(@RequestBody ContactMessage message) {
+        return service.save(message);
+    }
+
+    @GetMapping
+    public List<ContactMessage> getAllMessages() {
+        return service.getAll();
+    }
+}
