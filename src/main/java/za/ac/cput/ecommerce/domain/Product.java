@@ -35,7 +35,7 @@ public class Product {
     }
 
 
-    // ----------- Getters & Setters -----------
+
     public Long getProductId() { return productId; }
     public void setProductId(Long productId) { this.productId = productId; }
 
@@ -60,7 +60,7 @@ public class Product {
     public SubCategory getSubCategory() { return subCategory; }
     public void setSubCategory(SubCategory subCategory) { this.subCategory = subCategory; }
 
-    // ----------- Builder Pattern -----------
+
     public static class Builder {
         private Long productId;
         private String proName;

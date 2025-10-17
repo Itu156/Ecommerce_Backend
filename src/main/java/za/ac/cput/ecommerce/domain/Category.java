@@ -27,7 +27,7 @@ public class Category {
         this.subCategories = subCategories;
     }
 
-    // ----------- Getters & Setters -----------
+
     public Long getCateId() { return cateId; }
     public void setCateId(Long cateId) { this.cateId = cateId; }
 
@@ -41,7 +41,7 @@ public class Category {
     public void setSubCategories(Set<SubCategory> subCategories) { this.subCategories = subCategories; }
 
 
-    // ----------- Builder Pattern -----------
+
     public static class Builder {
         private Long cateId;
         private String catName;

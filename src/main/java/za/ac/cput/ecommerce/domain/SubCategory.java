@@ -34,7 +34,7 @@ public class SubCategory {
         this.products = products;
     }
 
-    // ----------- Getters & Setters -----------
+
     public Long getSubcatId() { return subcatId; }
     public void setSubcatId(Long subcatId) { this.subcatId = subcatId; }
 
@@ -54,7 +54,7 @@ public class SubCategory {
     public void setProducts(Set<Product> products) { this.products = products; }
 
 
-    // ----------- Builder Pattern -----------
+
     public static class Builder {
         private Long subcatId;
         private String subcatName;
