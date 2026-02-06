@@ -35,8 +35,8 @@ cd Ecommerce_Backend
 
 ## 🚀 How to Run the Project
 
-mvn clean install
-mvn spring-boot:run
+- mvn clean install
+- mvn spring-boot:run
 
 ## 💡 Notes 
 
